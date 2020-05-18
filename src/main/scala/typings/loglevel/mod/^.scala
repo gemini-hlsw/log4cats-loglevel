@@ -8,4 +8,3 @@ import scala.scalajs.js.annotation._
 @JSImport("loglevel", JSImport.Namespace)
 @js.native
 object ^ extends TopLevel[RootLogger]
-

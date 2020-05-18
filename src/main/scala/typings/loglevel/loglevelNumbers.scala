@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation._
 object loglevelNumbers {
   @js.native
   sealed trait `0` extends LogLevelNumbers
-  
+
   @js.native
   sealed trait `1` extends LogLevelNumbers
-  
+
   @js.native
   sealed trait `2` extends LogLevelNumbers
-  
+
   @js.native
   sealed trait `3` extends LogLevelNumbers
-  
+
   @js.native
   sealed trait `4` extends LogLevelNumbers
-  
+
   @js.native
   sealed trait `5` extends LogLevelNumbers
-  
+
   @scala.inline
   def `0`: `0` = 0.asInstanceOf[`0`]
   @scala.inline
@@ -37,4 +37,3 @@ object loglevelNumbers {
   @scala.inline
   def `5`: `5` = 5.asInstanceOf[`5`]
 }
-
