@@ -1,6 +1,6 @@
 # log4cats-loglevel - Log4cats loglevel Integration
 
-![Build Status](https://github.com/rpiaggio/log4cats-loglevel/workflows/build/badge.svg) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.rpiaggio/log4cats-loglevel_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.rpiaggio/log4cats-loglevel_2.12)
+![Build Status](https://github.com/rpiaggio/log4cats-loglevel/workflows/build/badge.svg) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.rpiaggio/log4cats-loglevel_sjs1_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.rpiaggio/log4cats-loglevel_sjs1_2.13)
 
 ## Quick Start
 
