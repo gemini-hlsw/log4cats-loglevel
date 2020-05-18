@@ -4,10 +4,10 @@ import cats.effect.Sync
 import typings.loglevel.mod.^
 import typings.loglevel.mod.LogLevelDesc
 import typings.loglevel.mod.{ Logger => Base }
-import io.chrisdavenport.log4cats.SelfAwareLogger
-import typings.loglevel.loglevelNumbers
-import loglevelNumbers._
 import typings.loglevel.mod.LogLevelNumbers
+import typings.loglevel.loglevelNumbers
+import typings.loglevel.loglevelNumbers._
+import io.chrisdavenport.log4cats.SelfAwareLogger
 
 object LogLevelLogger {
   type Level = LogLevelNumbers

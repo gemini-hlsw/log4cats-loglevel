@@ -30,6 +30,7 @@ lazy val root = project
       "org.typelevel"     %%% "cats-effect"   % "2.1.3",
       "io.chrisdavenport" %%% "log4cats-core" % "1.1.1"
     ),
+    useYarn := true,
     npmDependencies in Compile ++= Seq(
       "loglevel" -> "1.6.8"
     ),
@@ -42,6 +43,6 @@ lazy val root = project
     ),
     pomIncludeRepository := { _ => false }
   )
-  .enablePlugins(ScalaJSPlugin, ScalablyTypedConverterPlugin)
+  .enablePlugins(ScalaJSBundlerPlugin /*ScalaJSPlugin , ScalablyTypedConverterPlugin*/ )
 
 sonatypeProfileName := "com.rpiaggio"
