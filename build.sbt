@@ -4,8 +4,8 @@ inThisBuild(
   List(
     name := "log4cats-loglevel",
     organization := "com.rpiaggio",
-    scalaVersion := "2.13.2",
-    crossScalaVersions := Seq("2.12.11", scalaVersion.value),
+    scalaVersion := "2.13.3",
+    crossScalaVersions := Seq("2.12.12", scalaVersion.value),
     homepage := Some(url("https://github.com/rpiaggio/log4cats-loglevel")),
     licenses += ("BSD 3-Clause", url(
       "http://opensource.org/licenses/BSD-3-Clause"
@@ -27,7 +27,7 @@ lazy val root = project
     name := "log4cats-loglevel",
     moduleName := "log4cats-loglevel",
     libraryDependencies ++= Seq(
-      "org.typelevel"     %%% "cats-effect"   % "2.1.4",
+      "org.typelevel"     %%% "cats-effect"   % "2.2.0",
       "io.chrisdavenport" %%% "log4cats-core" % "1.1.1"
     ),
     useYarn := true,
