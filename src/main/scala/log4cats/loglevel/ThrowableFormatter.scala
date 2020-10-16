@@ -14,7 +14,7 @@ class StandardThrowableFormatter(
   private[this] final val indentString = " " * indentSize
 
   def apply(t: Throwable)(message: => String): String =
-    s"$message${renderStackTrace(t).map("\n" + _)}"
+    s"$message:\n${renderStackTrace(t)}"
 
   protected[this] def renderStackTrace(t: Throwable): String =
     (t +: unfoldCauses(t)).map(renderOneStack).mkString("Caused by: ")
