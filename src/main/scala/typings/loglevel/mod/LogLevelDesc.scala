@@ -7,12 +7,10 @@ import typings.loglevel.loglevelStrings.silent_
 import typings.loglevel.loglevelStrings.trace_
 import typings.loglevel.loglevelStrings.warn_
 import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
 
 /**
-  * Possible log level descriptors, may be string, lower or upper case, or number.
-  */
+ * Possible log level descriptors, may be string, lower or upper case, or number.
+ */
 /* Inlined loglevel.loglevel.LogLevelNumbers | 'trace' | 'debug' | 'info' | 'warn' | 'error' | 'silent' | keyof loglevel.loglevel.LogLevel */
 /* Rewritten from type alias, can be one of:
   - typings.loglevel.loglevelNumbers.`4`

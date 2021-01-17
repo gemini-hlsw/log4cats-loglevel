@@ -1,12 +1,10 @@
 package typings.loglevel.mod
 
 import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
 
 /**
-  * Possible log level numbers.
-  */
+ * Possible log level numbers.
+ */
 /* Inlined loglevel.loglevel.LogLevel[keyof loglevel.loglevel.LogLevel] */
 /* Rewritten from type alias, can be one of:
   - typings.loglevel.loglevelNumbers.`4`

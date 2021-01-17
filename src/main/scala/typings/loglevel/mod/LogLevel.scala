@@ -7,12 +7,10 @@ import typings.loglevel.loglevelNumbers.`3`
 import typings.loglevel.loglevelNumbers.`4`
 import typings.loglevel.loglevelNumbers.`5`
 import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
 
 /**
-  * Log levels
-  */
+ * Log levels
+ */
 @js.native
 trait LogLevel extends js.Object {
   var DEBUG: `1`  = js.native
