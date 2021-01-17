@@ -1,8 +1,6 @@
 package typings.loglevel
 
 import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
 
 package object mod {
   type LoggingMethod = js.Function1[ /* repeated */ js.Any, scala.Unit]

@@ -1,7 +1,6 @@
 package typings.loglevel
 
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* This can be used to `require` the library as a side effect.

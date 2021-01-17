@@ -2,8 +2,6 @@ package typings.loglevel
 
 import typings.loglevel.mod.LogLevelNumbers
 import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
 
 object loglevelNumbers {
   @js.native

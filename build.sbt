@@ -4,8 +4,7 @@ inThisBuild(
   List(
     name := "log4cats-loglevel",
     organization := "com.rpiaggio",
-    scalaVersion := "2.13.3",
-    crossScalaVersions := Seq("2.12.12", scalaVersion.value),
+    scalaVersion := "2.13.4",
     homepage := Some(url("https://github.com/rpiaggio/log4cats-loglevel")),
     licenses += ("BSD 3-Clause", url(
       "http://opensource.org/licenses/BSD-3-Clause"
@@ -27,12 +26,12 @@ lazy val root = project
     name := "log4cats-loglevel",
     moduleName := "log4cats-loglevel",
     libraryDependencies ++= Seq(
-      "org.typelevel"     %%% "cats-effect"   % "2.2.0",
+      "org.typelevel"     %%% "cats-effect"   % "2.3.1",
       "io.chrisdavenport" %%% "log4cats-core" % "1.1.1"
     ),
     useYarn := true,
     npmDependencies in Compile ++= Seq(
-      "loglevel" -> "1.6.8"
+      "loglevel" -> "1.7.1"
     ),
     scmInfo := Some(
       ScmInfo(
@@ -41,8 +40,16 @@ lazy val root = project
         Some("scm:git:git@github.com:rpiaggio/log4cats-loglevel.git")
       )
     ),
-    pomIncludeRepository := { _ => false }
+    pomIncludeRepository := { _ => false },
+    scalacOptions ~= (_.filterNot(
+      Set(
+        // By necessity facades will have unused params
+        "-Wdead-code",
+        "-Wunused:params",
+        "-Wunused:explicits"
+      )
+    ))
   )
-  .enablePlugins(ScalaJSBundlerPlugin /*ScalaJSPlugin , ScalablyTypedConverterPlugin*/ )
+  .enablePlugins(ScalaJSBundlerPlugin)
 
 sonatypeProfileName := "com.rpiaggio"

@@ -5,7 +5,6 @@ import typings.loglevel.mod.^
 import typings.loglevel.mod.LogLevelDesc
 import typings.loglevel.mod.{ Logger => Base }
 import typings.loglevel.mod.LogLevelNumbers
-import typings.loglevel.loglevelNumbers
 import typings.loglevel.loglevelNumbers._
 import io.chrisdavenport.log4cats.SelfAwareLogger
 
