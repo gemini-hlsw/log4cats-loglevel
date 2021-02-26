@@ -6,7 +6,7 @@ import typings.loglevel.mod.LogLevelDesc
 import typings.loglevel.mod.{ Logger => Base }
 import typings.loglevel.mod.LogLevelNumbers
 import typings.loglevel.loglevelNumbers._
-import io.chrisdavenport.log4cats.SelfAwareLogger
+import org.typelevel.log4cats.SelfAwareLogger
 
 object LogLevelLogger {
   type Level = LogLevelNumbers
