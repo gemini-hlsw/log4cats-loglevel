@@ -4,7 +4,7 @@ inThisBuild(
   List(
     name := "log4cats-loglevel",
     organization := "com.rpiaggio",
-    scalaVersion := "2.13.4",
+    scalaVersion := "2.13.5",
     homepage := Some(url("https://github.com/rpiaggio/log4cats-loglevel")),
     licenses += ("BSD 3-Clause", url(
       "http://opensource.org/licenses/BSD-3-Clause"
