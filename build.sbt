@@ -2,7 +2,6 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 inThisBuild(
   List(
-    name := "log4cats-loglevel",
     organization := "com.rpiaggio",
     scalaVersion := "2.13.5",
     homepage := Some(url("https://github.com/rpiaggio/log4cats-loglevel")),
