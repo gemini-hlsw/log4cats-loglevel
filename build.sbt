@@ -26,7 +26,7 @@ lazy val root = project
     moduleName := "log4cats-loglevel",
     libraryDependencies ++= Seq(
       "org.typelevel" %%% "cats-effect"   % "3.1.0",
-      "org.typelevel" %%% "log4cats-core" % "1.2.2"
+      "org.typelevel" %%% "log4cats-core" % "1.3.0"
     ),
     useYarn := true,
     npmDependencies in Compile ++= Seq(
