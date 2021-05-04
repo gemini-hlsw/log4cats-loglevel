@@ -29,7 +29,7 @@ lazy val root = project
       "org.typelevel" %%% "log4cats-core" % "2.1.0"
     ),
     useYarn := true,
-    npmDependencies in Compile ++= Seq(
+    Compile / npmDependencies ++= Seq(
       "loglevel" -> "1.7.1"
     ),
     scmInfo := Some(
