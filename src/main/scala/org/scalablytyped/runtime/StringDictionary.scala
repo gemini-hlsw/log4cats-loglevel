@@ -8,7 +8,7 @@ trait StringDictionary[+V] extends js.Object
 object StringDictionary {
 
   /** Returns a new empty dictionary */
-  @inline def empty[A]: StringDictionary[A] =
+  @inline def empty[A]: StringDictionary[A]                                                     =
     (new js.Object).asInstanceOf[StringDictionary[A]]
 
   @inline
