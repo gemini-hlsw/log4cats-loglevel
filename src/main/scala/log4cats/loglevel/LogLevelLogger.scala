@@ -11,25 +11,25 @@ import org.typelevel.log4cats.SelfAwareLogger
 object LogLevelLogger {
   type Level = LogLevelNumbers
 
-  private val levelNumbersOrder: Map[LogLevelNumbers, Int] =
+  private val levelNumbersOrder: Map[LogLevelNumbers, Int]   =
     List(`0`, `1`, `2`, `3`, `4`, `5`).zipWithIndex.toMap
 
   implicit private val levelNumbersOrdering: Ordering[Level] =
     Ordering.by(levelNumbersOrder)
   import levelNumbersOrdering._
 
-  private val throwableFormatter = new StandardThrowableFormatter()
+  private val throwableFormatter                             = new StandardThrowableFormatter()
 
   val Level = LogLevelDesc
 
-  def setLevel(level:        LogLevelDesc): Unit = ^.setLevel(level)
+  def setLevel(level: LogLevelDesc): Unit        = ^.setLevel(level)
   def setDefaultLevel(level: LogLevelDesc): Unit = ^.setDefaultLevel(level)
-  def disableAll(): Unit = ^.disableAll()
-  def enableAll(): Unit  = ^.enableAll()
-  def getLevel: Level    = ^.getLevel().asInstanceOf[Level]
+  def disableAll(): Unit                         = ^.disableAll()
+  def enableAll(): Unit                          = ^.enableAll()
+  def getLevel: Level                            = ^.getLevel().asInstanceOf[Level]
 
-  def createForRoot[F[_]: Sync] = fromLogLevel[F](^)
-  def createByName[F[_]: Sync](name:   String)   = fromLogLevel[F](^.getLogger(name))
+  def createForRoot[F[_]: Sync]                  = fromLogLevel[F](^)
+  def createByName[F[_]: Sync](name: String)     = fromLogLevel[F](^.getLogger(name))
   def createByClass[F[_]: Sync](clazz: Class[_]) = fromLogLevel[F](^.getLogger(clazz.getName))
 
   def fromLogLevel[F[_]: Sync](logger: Base): SelfAwareLogger[F] =
@@ -64,10 +64,10 @@ object LogLevelLogger {
       override def error(t: Throwable)(message: => String): F[Unit] =
         error(throwableFormatter(t)(message))
 
-      override def warn(t: Throwable)(message: => String): F[Unit] =
+      override def warn(t: Throwable)(message: => String): F[Unit]  =
         warn(throwableFormatter(t)(message))
 
-      override def info(t: Throwable)(message: => String): F[Unit] =
+      override def info(t: Throwable)(message: => String): F[Unit]  =
         info(throwableFormatter(t)(message))
 
       override def debug(t: Throwable)(message: => String): F[Unit] =
