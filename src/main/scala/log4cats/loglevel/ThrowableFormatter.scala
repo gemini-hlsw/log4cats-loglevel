@@ -13,13 +13,13 @@ class StandardThrowableFormatter(
   private[this] final val indentSize   = 8
   private[this] final val indentString = " " * indentSize
 
-  def apply(t: Throwable)(message: => String): String          =
+  def apply(t: Throwable)(message: => String): String =
     s"$message:\n${renderStackTrace(t)}"
 
-  protected[this] def renderStackTrace(t: Throwable): String   =
+  protected[this] def renderStackTrace(t: Throwable): String =
     (t +: unfoldCauses(t)).map(renderOneStack).mkString("Caused by: ")
 
-  protected[this] def renderOneStack(t: Throwable): String     = {
+  protected[this] def renderOneStack(t: Throwable): String = {
     val className = t.getClass.getName
     val message   = if (useLocalizedThrowableMessages) t.getLocalizedMessage else t.getMessage
     val stack     = {
