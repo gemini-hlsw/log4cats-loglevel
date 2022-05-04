@@ -41,27 +41,27 @@ object loglevelStrings {
   sealed trait warn_ extends LogLevelDesc
 
   @scala.inline
-  def DEBUG: DEBUG = "DEBUG".asInstanceOf[DEBUG]
+  def DEBUG: DEBUG      = "DEBUG".asInstanceOf[DEBUG]
   @scala.inline
-  def ERROR: ERROR = "ERROR".asInstanceOf[ERROR]
+  def ERROR: ERROR      = "ERROR".asInstanceOf[ERROR]
   @scala.inline
-  def INFO: INFO = "INFO".asInstanceOf[INFO]
+  def INFO: INFO        = "INFO".asInstanceOf[INFO]
   @scala.inline
-  def SILENT: SILENT = "SILENT".asInstanceOf[SILENT]
+  def SILENT: SILENT    = "SILENT".asInstanceOf[SILENT]
   @scala.inline
-  def TRACE: TRACE = "TRACE".asInstanceOf[TRACE]
+  def TRACE: TRACE      = "TRACE".asInstanceOf[TRACE]
   @scala.inline
-  def WARN: WARN = "WARN".asInstanceOf[WARN]
+  def WARN: WARN        = "WARN".asInstanceOf[WARN]
   @scala.inline
-  def debug_ : debug_ = "debug".asInstanceOf[debug_]
+  def debug_ : debug_   = "debug".asInstanceOf[debug_]
   @scala.inline
-  def error_ : error_ = "error".asInstanceOf[error_]
+  def error_ : error_   = "error".asInstanceOf[error_]
   @scala.inline
-  def info_ : info_ = "info".asInstanceOf[info_]
+  def info_ : info_     = "info".asInstanceOf[info_]
   @scala.inline
   def silent_ : silent_ = "silent".asInstanceOf[silent_]
   @scala.inline
-  def trace_ : trace_ = "trace".asInstanceOf[trace_]
+  def trace_ : trace_   = "trace".asInstanceOf[trace_]
   @scala.inline
-  def warn_ : warn_ = "warn".asInstanceOf[warn_]
+  def warn_ : warn_     = "warn".asInstanceOf[warn_]
 }
