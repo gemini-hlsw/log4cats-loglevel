@@ -2,14 +2,14 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 inThisBuild(
   List(
-    organization := "com.rpiaggio",
-    scalaVersion := "2.13.8",
+    organization       := "com.rpiaggio",
+    scalaVersion       := "2.13.8",
     crossScalaVersions := Seq("2.13.8", "3.1.2"),
-    homepage     := Some(url("https://github.com/rpiaggio/log4cats-loglevel")),
+    homepage           := Some(url("https://github.com/rpiaggio/log4cats-loglevel")),
     licenses += ("BSD 3-Clause", url(
       "http://opensource.org/licenses/BSD-3-Clause"
     )),
-    developers   := List(
+    developers         := List(
       Developer(
         "rpiaggio",
         "Raúl Piaggio",
@@ -27,7 +27,7 @@ lazy val root = project
     moduleName           := "log4cats-loglevel",
     libraryDependencies ++= Seq(
       "org.typelevel" %%% "cats-effect"   % "3.3.11",
-      "org.typelevel" %%% "log4cats-core" % "2.3.0"
+      "org.typelevel" %%% "log4cats-core" % "2.3.1"
     ),
     useYarn              := true,
     Compile / npmDependencies ++= Seq(
