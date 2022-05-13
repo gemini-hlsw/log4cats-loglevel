@@ -18,7 +18,7 @@ object LogLevelLogger {
     Ordering.by(levelNumbersOrder)
   import levelNumbersOrdering._
 
-  private val throwableFormatter = new StandardThrowableFormatter()
+  private val throwableFormatter = new StandardThrowableFormatter
 
   val Level = LogLevelDesc
 

@@ -48,8 +48,8 @@ class StandardThrowableFormatter(
     def unfold[A, B](b: B)(fn: B => Option[(A, B)]): Seq[A] = {
       @tailrec def helper(b: B, accum: Vector[A]): Seq[A] =
         fn(b) match {
-          case Some((a, b2)) => helper(b2, accum :+ a)
-          case None          => accum
+          case Some(a, b2) => helper(b2, accum :+ a)
+          case None        => accum
         }
       helper(b, Vector.empty)
     }
