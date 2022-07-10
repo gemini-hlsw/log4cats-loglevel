@@ -38,7 +38,7 @@ class StandardThrowableFormatter(
             }
             .toSeq
             .flatten
-        (basicInfo ++ positionInfo :+ "\n")
+        basicInfo ++ positionInfo :+ "\n"
       }
     }
     s"$className: $message\n${stack.mkString}"
