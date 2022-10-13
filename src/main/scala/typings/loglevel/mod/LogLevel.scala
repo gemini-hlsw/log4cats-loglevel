@@ -1,3 +1,6 @@
+// Copyright (c) 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)
+// For license information see LICENSE or https://opensource.org/licenses/BSD-3-Clause
+
 package typings.loglevel.mod
 
 import typings.loglevel.loglevelNumbers.`0`
@@ -6,6 +9,7 @@ import typings.loglevel.loglevelNumbers.`2`
 import typings.loglevel.loglevelNumbers.`3`
 import typings.loglevel.loglevelNumbers.`4`
 import typings.loglevel.loglevelNumbers.`5`
+
 import scala.scalajs.js
 
 /**

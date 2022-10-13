@@ -1,12 +1,15 @@
+// Copyright (c) 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)
+// For license information see LICENSE or https://opensource.org/licenses/BSD-3-Clause
+
 package log4cats.loglevel
 
 import cats.effect.Sync
-import typings.loglevel.mod.^
-import typings.loglevel.mod.LogLevelDesc
-import typings.loglevel.mod.{Logger => Base}
-import typings.loglevel.mod.LogLevelNumbers
-import typings.loglevel.loglevelNumbers._
 import org.typelevel.log4cats.SelfAwareLogger
+import typings.loglevel.loglevelNumbers._
+import typings.loglevel.mod.LogLevelDesc
+import typings.loglevel.mod.LogLevelNumbers
+import typings.loglevel.mod.^
+import typings.loglevel.mod.{Logger => Base}
 
 object LogLevelLogger {
   type Level = LogLevelNumbers
@@ -30,7 +33,7 @@ object LogLevelLogger {
 
   def createForRoot[F[_]: Sync]                  = fromLogLevel[F](^)
   def createByName[F[_]: Sync](name: String)     = fromLogLevel[F](^.getLogger(name))
-  def createByClass[F[_]: Sync](clazz: Class[_]) = fromLogLevel[F](^.getLogger(clazz.getName))
+  def createByClass[F[_]: Sync](clazz: Class[?]) = fromLogLevel[F](^.getLogger(clazz.getName))
 
   def fromLogLevel[F[_]: Sync](logger: Base): SelfAwareLogger[F] =
     new SelfAwareLogger[F] {

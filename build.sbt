@@ -7,6 +7,7 @@ lazy val root = project
   .in(file("."))
   .settings(
     name    := "log4cats-loglevel",
+    scalacOptions += "-language:implicitConversions",
     libraryDependencies ++= Seq(
       "org.typelevel" %%% "cats-effect"   % "3.3.14",
       "org.typelevel" %%% "log4cats-core" % "2.5.0"
