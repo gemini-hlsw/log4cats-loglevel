@@ -3,8 +3,8 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 inThisBuild(
   List(
     organization       := "com.rpiaggio",
-    scalaVersion       := "2.13.8",
-    crossScalaVersions := Seq("2.13.8", "3.2.0"),
+    scalaVersion       := "2.13.9",
+    crossScalaVersions := Seq("2.13.9", "3.2.0"),
     homepage           := Some(url("https://github.com/rpiaggio/log4cats-loglevel")),
     licenses += ("BSD 3-Clause", url(
       "http://opensource.org/licenses/BSD-3-Clause"
