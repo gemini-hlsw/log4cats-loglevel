@@ -3,7 +3,7 @@ package log4cats.loglevel
 import cats.effect.Sync
 import typings.loglevel.mod.^
 import typings.loglevel.mod.LogLevelDesc
-import typings.loglevel.mod.{ Logger => Base }
+import typings.loglevel.mod.{Logger => Base}
 import typings.loglevel.mod.LogLevelNumbers
 import typings.loglevel.loglevelNumbers._
 import org.typelevel.log4cats.SelfAwareLogger
