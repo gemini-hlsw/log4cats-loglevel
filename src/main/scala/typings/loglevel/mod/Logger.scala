@@ -45,7 +45,7 @@ trait Logger extends js.Object {
    *   Node), or if you pass false as the optional 'persist' second argument, persistence will be
    *   skipped.
    */
-  def disableAll(): Unit                 = js.native
+  def disableAll(): Unit = js.native
   def disableAll(persist: Boolean): Unit = js.native
 
   /**
@@ -57,7 +57,7 @@ trait Logger extends js.Object {
    *   Node), or if you pass false as the optional 'persist' second argument, persistence will be
    *   skipped.
    */
-  def enableAll(): Unit                 = js.native
+  def enableAll(): Unit = js.native
   def enableAll(persist: Boolean): Unit = js.native
 
   /**
@@ -135,7 +135,7 @@ trait Logger extends js.Object {
    *   Node), or if you pass false as the optional 'persist' second argument, persistence will be
    *   skipped.
    */
-  def setLevel(level: LogLevelDesc): Unit                   = js.native
+  def setLevel(level: LogLevelDesc): Unit = js.native
   def setLevel(level: LogLevelDesc, persist: Boolean): Unit = js.native
 
   /**
