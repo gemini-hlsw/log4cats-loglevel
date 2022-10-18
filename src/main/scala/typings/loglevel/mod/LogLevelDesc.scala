@@ -1,3 +1,6 @@
+// Copyright (c) 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)
+// For license information see LICENSE or https://opensource.org/licenses/BSD-3-Clause
+
 package typings.loglevel.mod
 
 import typings.loglevel.loglevelStrings.debug_
@@ -6,6 +9,7 @@ import typings.loglevel.loglevelStrings.info_
 import typings.loglevel.loglevelStrings.silent_
 import typings.loglevel.loglevelStrings.trace_
 import typings.loglevel.loglevelStrings.warn_
+
 import scala.scalajs.js
 
 /**
