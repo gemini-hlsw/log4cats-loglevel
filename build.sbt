@@ -3,6 +3,8 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 ThisBuild / crossScalaVersions := List("3.2.0")
 ThisBuild / tlBaseVersion      := "0.4"
 
+ThisBuild / tlCiReleaseBranches := Seq("master")
+
 lazy val root = project
   .in(file("."))
   .settings(
