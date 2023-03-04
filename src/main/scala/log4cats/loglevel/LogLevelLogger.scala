@@ -1,4 +1,4 @@
-// Copyright (c) 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)
+// Copyright (c) 2016-2023 Association of Universities for Research in Astronomy, Inc. (AURA)
 // For license information see LICENSE or https://opensource.org/licenses/BSD-3-Clause
 
 package log4cats.loglevel
@@ -25,14 +25,14 @@ object LogLevelLogger {
 
   val Level = LogLevelDesc
 
-  def setLevel(level: LogLevelDesc): Unit        = ^.setLevel(level)
+  def setLevel(level:        LogLevelDesc): Unit = ^.setLevel(level)
   def setDefaultLevel(level: LogLevelDesc): Unit = ^.setDefaultLevel(level)
-  def disableAll(): Unit                         = ^.disableAll()
-  def enableAll(): Unit                          = ^.enableAll()
-  def getLevel: Level                            = ^.getLevel().asInstanceOf[Level]
+  def disableAll(): Unit = ^.disableAll()
+  def enableAll(): Unit  = ^.enableAll()
+  def getLevel: Level    = ^.getLevel().asInstanceOf[Level]
 
-  def createForRoot[F[_]: Sync]                  = fromLogLevel[F](^)
-  def createByName[F[_]: Sync](name: String)     = fromLogLevel[F](^.getLogger(name))
+  def createForRoot[F[_]: Sync] = fromLogLevel[F](^)
+  def createByName[F[_]: Sync](name:   String)   = fromLogLevel[F](^.getLogger(name))
   def createByClass[F[_]: Sync](clazz: Class[?]) = fromLogLevel[F](^.getLogger(clazz.getName))
 
   def fromLogLevel[F[_]: Sync](logger: Base): SelfAwareLogger[F] =
