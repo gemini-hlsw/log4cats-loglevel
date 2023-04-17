@@ -11,7 +11,7 @@ lazy val root = project
     name    := "log4cats-loglevel",
     scalacOptions += "-language:implicitConversions",
     libraryDependencies ++= Seq(
-      "org.typelevel" %%% "cats-effect"   % "3.4.8",
+      "org.typelevel" %%% "cats-effect"   % "3.4.9",
       "org.typelevel" %%% "log4cats-core" % "2.5.0"
     ),
     useYarn := true,
