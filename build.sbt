@@ -12,7 +12,7 @@ lazy val root = project
     scalacOptions += "-language:implicitConversions",
     libraryDependencies ++= Seq(
       "org.typelevel" %%% "cats-effect"   % "3.5.1",
-      "org.typelevel" %%% "log4cats-core" % "2.5.0"
+      "org.typelevel" %%% "log4cats-core" % "2.6.0"
     ),
     useYarn := true,
     Compile / npmDependencies ++= Seq(
