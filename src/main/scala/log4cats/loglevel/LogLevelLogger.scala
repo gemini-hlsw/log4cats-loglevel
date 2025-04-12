@@ -27,11 +27,11 @@ object LogLevelLogger {
 
   def setLevel(level:        LogLevelDesc): Unit = ^.setLevel(level)
   def setDefaultLevel(level: LogLevelDesc): Unit = ^.setDefaultLevel(level)
-  def disableAll(): Unit = ^.disableAll()
-  def enableAll(): Unit  = ^.enableAll()
-  def getLevel: Level    = ^.getLevel().asInstanceOf[Level]
+  def disableAll(): Unit                         = ^.disableAll()
+  def enableAll(): Unit                          = ^.enableAll()
+  def getLevel: Level                            = ^.getLevel().asInstanceOf[Level]
 
-  def createForRoot[F[_]: Sync] = fromLogLevel[F](^)
+  def createForRoot[F[_]: Sync]                  = fromLogLevel[F](^)
   def createByName[F[_]: Sync](name:   String)   = fromLogLevel[F](^.getLogger(name))
   def createByClass[F[_]: Sync](clazz: Class[?]) = fromLogLevel[F](^.getLogger(clazz.getName))
 
